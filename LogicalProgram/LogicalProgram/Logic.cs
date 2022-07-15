@@ -11,26 +11,23 @@ namespace LogicalProgram
         public static void Pro()
         {
             Console.WriteLine("Enter a number");
-            int n = Convert.ToInt32(Console.ReadLine());
-            int sum = 0;
-            Console.WriteLine($"The divisors for {n} are");
-            for (int i = 1; i <= n / 2; i++)
+            int n = Convert.ToInt16(Console.ReadLine());
+            int a = 0;
+            for (int i = 1; i <= n; i++)
             {
                 if (n % i == 0)
                 {
-                    Console.WriteLine(i);
-                    sum += i;
+                    a++;
                 }
             }
-                Console.WriteLine($"{n} = {sum}");
-                if (n == sum)
-                {
-                    Console.WriteLine($"{n} is a perfect number");
-                }
-                else
-                {
-                    Console.WriteLine($"{n} is not a perfect number");
-                }
+            if (a == 2)
+            {
+                Console.WriteLine($"{n} is a Prime Number");
+            }
+            else
+            {
+                Console.WriteLine($"{n} is Not a Prime Number");
             }
         }
     }
+}
